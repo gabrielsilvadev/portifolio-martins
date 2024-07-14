@@ -1,0 +1,92 @@
+#sidebar {
+    position: fixed;
+    left: -200%; /* Começa fora da tela */
+    top: 15%;
+    width: 200px;
+    margin-left: 20%;
+    left: -50%;
+    background-color: rgba(14, 57, 94, 0.95); 
+    transition: left 0.3s ease;
+    border-radius: 5px;
+  }
+  
+  #sidebar.active {
+    left: 0%; /* Move para dentro da tela */
+  }
+  
+  #sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10%;
+  }
+  
+  #sidebar ul li {
+    padding: 0px;
+    border-bottom: 1px solid white;
+  }
+  
+  #sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  #sidebar ul li a:hover {
+    color: #8B173B;
+  }
+  
+  #sidebarCollapse {
+    position: fixed;
+    left: 20px;
+    margin-left: 25%;
+    size: 30px;
+    top: 20px;
+    z-index: 999;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #sidebarCollapse span {
+    display: block;
+    width: 15px;
+    height: 2px;
+    margin-bottom: 3px;
+    position: relative;
+    background: #fff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  #sidebarCollapse span.open:nth-child(1) {
+    transform: rotate(45deg) translate(3px, 4px);
+    width: 35px;
+    height: 3px;
+  }
+  
+  #sidebarCollapse span.open:nth-child(2) {
+    opacity: 0;
+  }
+  
+  #sidebarCollapse span.open:nth-child(3) {
+    transform: rotate(-45deg) translate(3px, -4px);
+    width: 35px;
+    height: 3px;
+  }
+  
+  #sidebarCollapse span.close:nth-child(1) {
+  
+    width: 35px;
+    height: 3px;
+  }
+  
+  #sidebarCollapse span.close:nth-child(2) {
+    margin-top:15%;
+    width: 35px;
+    height: 3px;
+  }
+  
+  #sidebarCollapse span.close:nth-child(3) {
+    margin-top: 15%;
+    width: 35px;
+    height: 3px;
+  }

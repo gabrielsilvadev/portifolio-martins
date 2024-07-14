@@ -1,0 +1,110 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    height: 30%;
+  }
+  
+  .carousel-container {
+    position: relative;
+    width: 50%; /* Largura do container do carousel */
+    max-width: 600px; /* Largura máxima do container */
+    margin-right: 20px; /* Espaço entre o carousel e o texto */
+    overflow: hidden; /* Esconder overflow para esconder partes das imagens que vão além do container */
+  }
+  
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Transição suave de 0.5 segundos */
+  }
+  
+  .carousel-item {
+    flex: 0 0 auto;
+    min-width: 100%; /* Largura mínima de cada slide */
+    transition: opacity 0.5s ease-in-out; /* Transição suave de opacidade */
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: auto; /* Para manter a proporção da imagem */
+    border-radius: 8px; /* Arredondamento das bordas */
+  }
+  
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .carousel-control.prev {
+    left: 1%;
+    background-color: transparent;
+  }
+  
+  .carousel-control.next {
+    right: 1%;
+    background-color: transparent;
+  }
+  
+  .carousel-indicators {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+  }
+  
+  .carousel-indicator {
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .carousel-indicator.active {
+    background-color: #8B173B;
+  }
+  
+  .text-container {
+    width: 45%; /* Largura do container de texto */
+  }
+  
+  .main-text {
+    font-size: 24px;
+    line-height: 1.5;
+  }
+  
+  .sub-text {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  .carousel-item {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 100%; /* Mantém a proporção quadrada */
+    overflow: hidden;
+  }
+  
+  .carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantém a proporção da imagem */
+  }
+  

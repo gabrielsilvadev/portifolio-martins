@@ -1,26 +1,45 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Button, Layout } from 'antd';
+import Navbar from './componentes/Navbar';
+import Home from './pages/Home';
+import logo from "../src/img/logos/logo-alt.png";
+import FooterComponent from './componentes/Footer';
+import QuemSomos from './pages/QuemSomos';
+import Servicos from './pages/Servicos';
+import ServicosDetalhes from './pages/ServicosDetalhes';
+import Time from './pages/Time';
 
-function App() {
+const { Header, Content, Footer } = Layout;
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Layout>
+        <Header>
+          <div>
+            <img src={logo} alt="Logo" />
+            <div className="navbar-container">
+              <Navbar />
+            </div>
+            <Button className="contact-button">FALE CONOSCO</Button>
+          </div>
+        </Header>
+        <Content>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/quem-somos" element={<QuemSomos />} />
+            <Route path="/servicos" element={<Servicos />} />
+            <Route path="/servicos-detalhes" element={<ServicosDetalhes />} />
+            <Route path="/time" element={<Time />} />
+          </Routes>
+        </Content>
+        <Footer>
+          <FooterComponent />
+        </Footer>
+      </Layout>
+    </Router>
   );
-}
+};
 
 export default App;
