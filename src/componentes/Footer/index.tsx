@@ -16,10 +16,10 @@ const FooterComponent = () => {
           <div className="footer-section">
             <span className="footer-heading">Conteúdo</span>
             <ul className="footer-links">
-              <li><a href="./" className="footer-link">Página Inicial</a></li>
-              <li><a href="quem-somos.html" className="footer-link">Quem Somos</a></li>
-              <li><a href="areas-de-atuacao.html" className="footer-link">Áreas de Atuação</a></li>
-              <li><a href="nosso-time.html" className="footer-link">Nosso Time</a></li>
+              <li><a href="/" className="footer-link">Página Inicial</a></li>
+              <li><a href="/quem-somos" className="footer-link">Quem Somos</a></li>
+              <li><a href="/servicos" className="footer-link">Áreas de Atuação</a></li>
+              <li><a href="/time" className="footer-link">Nosso Time</a></li>
             </ul>
           </div>
           <div className="footer-section">
@@ -27,7 +27,7 @@ const FooterComponent = () => {
             <ul className="footer-social-links">
               <li><a href="#"><AiFillFacebook className="footer-icon" /></a></li>
               <li><a href="#"><AiOutlineTwitter className="footer-icon" /></a></li>
-              <li><a href="https://www.instagram.com/brcradvogados/"><AiFillInstagram className="footer-icon" /></a></li>
+              <li><a href="https://www.instagram.com/martinsadvassociados_/"><AiFillInstagram className="footer-icon" /></a></li>
               <li><a href="#"><AiFillLinkedin className="footer-icon" /></a></li>
               <li><a href="#"><AiFillYoutube className="footer-icon" /></a></li>
             </ul>
@@ -36,8 +36,9 @@ const FooterComponent = () => {
             <span className="footer-heading">Contato</span>
             <ul className="footer-contact-links">
               <li><a href="mailto:contato@martinsassociados.adv.br"><HiOutlineMail className="footer-icon" /> <span>contato@martinsassociados.adv.br</span></a></li>
-              <li><a href="tel:996462316"><HiOutlinePhone className="footer-icon" /> <span>(83) 98104-9965</span></a></li>
-              <li><a href="https://www.google.com/maps/place/R.+Lino+Gomes+da+Silva,+215+-+S%C3%A3o+Jos%C3%A9,+Campina+Grande+-+PB,+58400-360/@-7.2239213,-35.8954453,17z/data=!3m1!4b1!4m6!3m5!1s0x7ac1e4633211fab:0x326f338dc4321905!8m2!3d-7.2239266!4d-35.8905744!16s%2Fg%2F11ffvm7s3x?entry=ttu">
+              <li><a href="tel:882141-8230"><HiOutlinePhone className="footer-icon" /> <span>
+              (88) 2141-8230</span></a></li>
+              <li><a href="https://www.google.com/maps/place/ESCRIT%C3%93RIO+DE+ADVOCACIA+-+MARTINS+ADVOGADOS+ASSOCIADOS/@-7.2320852,-39.4141653,17z/data=!3m1!4b1!4m6!3m5!1s0x7a185f9f8c3a581:0x8bde87e96d282b79!8m2!3d-7.2320852!4d-39.411585!16s%2Fg%2F11f62zqsyh?entry=ttu">
                 <HiOutlineLocationMarker className="footer-icon" /> <span>Rua Dr. João Pessoa n. 338-B, Centro, Crato - CE</span>
               </a></li>
             </ul>

@@ -259,7 +259,9 @@ const Home: React.FC = () => {
         <div style={{ position: 'relative', zIndex: 3, padding: '20px' }}>
           <h1 style={{ fontSize: 40 }}>Somos um <span style={{ color: '#B22222' }}>escritório<br/> de Advocacia multidisciplinar.</span></h1>
           <p style={{ fontSize: 20 }}>Com uma infraestrutura moderna, atendemos clientes de todo o Brasil</p>
-          <Button style={{ backgroundColor: '#8B173B',borderColor: "#8B173B", color: 'white', boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.7)'  }}>ENTRAR EM CONTATO <FaWhatsapp size={24}/></Button>
+          <a href="https://wa.me/5588996462316"  target="_blank" rel="noopener noreferrer" className="contact-link">
+          <Button style={{marginTop: '2%', backgroundColor: '#8B173B',borderColor: "#8B173B", color: 'white', boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.7)'  }}>ENTRAR EM CONTATO <FaWhatsapp size={24}/></Button>
+       </a>
         </div>
       </animated.section>
 
