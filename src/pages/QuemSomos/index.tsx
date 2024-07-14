@@ -130,6 +130,7 @@ const QuemSomos: React.FC = () => {
             color: 'white',
             boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.7)'
           }}
+          href="https://wa.me/5588996462316"  target="_blank" rel="noopener noreferrer"
         >
           AGENDAR UMA REUNIÃO
         </Button>
