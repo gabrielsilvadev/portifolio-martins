@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import './index.css';
 import logo from '../../img/logos/logo-martinsadv 2.png'
 

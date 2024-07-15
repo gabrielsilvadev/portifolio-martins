@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { animated, useTransition } from 'react-spring';
 import { AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
 import { BsBriefcase } from 'react-icons/bs'; // Exemplo de ícone para áreas de atuação

@@ -1,4 +1,3 @@
-import React from 'react';
 import { AiFillFacebook, AiOutlineTwitter, AiFillInstagram, AiFillLinkedin, AiFillYoutube } from 'react-icons/ai';
 import { HiOutlineMail, HiOutlinePhone, HiOutlineLocationMarker } from 'react-icons/hi';
 import './index.css'; // Estilo CSS para o footer
