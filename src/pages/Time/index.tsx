@@ -1,10 +1,9 @@
 import React, {useEffect, useRef} from 'react';
 import { useSpring, animated } from 'react-spring';
 
-import {  useLocation } from 'react-router-dom';
 import socios from '../../img/socios/3-socios.jpeg'
 import estatua from '../../img/escritorio/escritorio-2.jpeg'
-import {  useNavigate, Link } from 'react-router-dom';
+import {   Link } from 'react-router-dom';
 import ListaAdvogados from '../../componentes/ListaAdvogados';
 import './index.css';
 
