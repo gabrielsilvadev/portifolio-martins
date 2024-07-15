@@ -3,7 +3,7 @@ import { useSpring, animated } from 'react-spring';
 
 
 
-export const Card = ({ title, image, description, link, handleNavigate,  cardData, text}: any) => {
+export const Card = ({ title, image, description, handleNavigate,  cardData, text}: any) => {
     const [hovered, setHovered] = React.useState(false);
 
     const expand = useSpring({

@@ -64,11 +64,7 @@ const QuemSomos: React.FC = () => {
   }, [])
   
 
-  const navigate = useNavigate();
-
-  const handleNavigate = (serviceData:object) => {
-    navigate('/servicos-detalhes', { state: { serviceData } });
-  };
+ 
 
   const springProps = useSpring({
     opacity: 1,
