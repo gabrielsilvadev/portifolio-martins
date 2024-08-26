@@ -1,6 +1,5 @@
 import React from 'react';
-import { Button } from 'antd';
-import { useSpring, animated } from 'react-spring';
+import { useSpring } from 'react-spring';
 import backgroundMain from "../../img/home/background-main.jpeg";
 import socios from '../../img/socios/3-socios.jpeg'
 import { FaWhatsapp } from "react-icons/fa";
@@ -16,6 +15,7 @@ import HorizontalScroll from '../../componentes/ScrollTime';
 import ImageCarousel from '../../componentes/Carrosel';
 import ContactForm from '../../componentes/Contact';
 import {  useNavigate } from 'react-router-dom';
+import { Container, Section, BackgroundImage, Overlay, Content, Highlight, ContactButton, Subtitle, Title, InfoText, Image, CardContainer } from './styles';
 
 const Home: React.FC = () => {
   const fadeIn = useSpring({
@@ -249,77 +249,72 @@ const Home: React.FC = () => {
   
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column' }}>
-      <animated.section style={{ ...fadeIn, position: 'relative', height: '500px', display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center', color: 'white' }}>
-        <img src={backgroundMain} alt="Background" style={{ position: 'absolute', width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }} />
-        <div style={{ position: 'absolute', width: '100%', height: '100%', backgroundColor: 'rgba(14, 57, 94, 0.9)', zIndex: 2 }}></div>
-        <div style={{ position: 'relative', zIndex: 3, padding: '20px' }}>
-          <h1 style={{ fontSize: 40 }}>Somos um <span style={{ color: '#B22222' }}>escritório<br/> de Advocacia multidisciplinar.</span></h1>
-          <p style={{ fontSize: 20 }}>Com uma infraestrutura moderna, atendemos clientes de todo o Brasil</p>
-          <a href="https://wa.me/5588996462316"  target="_blank" rel="noopener noreferrer" className="contact-link">
-          <Button style={{marginTop: '2%', backgroundColor: '#8B173B',borderColor: "#8B173B", color: 'white', boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.7)'  }}>ENTRAR EM CONTATO <FaWhatsapp size={24}/></Button>
-       </a>
+    <Container>
+      <Section style={{...fadeIn, height:"500px"}} >
+        <BackgroundImage src={backgroundMain} alt="Background" />
+        <Overlay />
+        <Content>
+          <h1>Somos um <Highlight>escritório<br/> de Advocacia multidisciplinar.</Highlight></h1>
+          <p>Com uma infraestrutura moderna, atendemos clientes de todo o Brasil</p>
+          <a href="https://wa.me/5588996462316" target="_blank" rel="noopener noreferrer">
+            <ContactButton>ENTRAR EM CONTATO <FaWhatsapp size={24} /></ContactButton>
+          </a>
+        </Content>
+      </Section>
+
+      <Section style={{...fadeIn, backgroundColor:"#FFFFFF", padding:"35px",height:"450px"}}  color="#0E395E"  >
+        <div>
+          <Subtitle>RESPONSABILIDADE E TRANSPARÊNCIA</Subtitle>
+          <Title>Quem Somos<Highlight>.</Highlight></Title>
+          <InfoText>Um escritório que combina tradição <br/> e inovação para oferecer soluções jurídicas de alto nível.<br/> Com uma fundação baseada<br/> no compromisso de prestar serviços jurídicos excepcionais, <br/>
+          nosso escritório possui uma história notável <br/> de sucesso e dedicação no atendimento aos nossos clientes.</InfoText>
         </div>
-      </animated.section>
+        <Image src={socios} alt="Sócios" />
+      </Section>
 
-      <animated.section style={{ ...fadeIn, backgroundColor: '#FFFFFF', color: '#0E395E', padding: '35px',  height: '450px',display: 'flex' , flexDirection: 'row', justifyContent: 'space-between' }}>
-      <div>
-       <p style={{fontSize: 20, color: 'gray'}}>RESPONSABILIDADE E TRANSPARÊNCIA</p>
-        <h1 style={{fontSize: 40}}>Quem Somos<span style={{color: "#8B173B"}} >.</span></h1>
-        <p style={{fontSize: 20}}>Um escritório que combina tradição <br/> e inovação para oferecer soluções jurídicas de alto nível.<br/> Com uma fundação baseada<br/> no compromisso de prestar serviços jurídicos excepcionais, <br/>
-        nosso escritório possui uma história notável <br/> de sucesso e dedicação no atendimento aos nossos clientes.</p>
-        </div>
-        <img src={socios} height={390} width={470} />
-      </animated.section>
+      <Section style={{...fadeIn, backgroundColor:"#0E395E"}} >
+        <BackgroundImage src={backgroundImg6} alt="Background" />
+        <Overlay />
+        <Content>
+          <Subtitle>PLANO ESTRATÉGICO E ESPECIALIZADO</Subtitle>
+          <Title>áreas de atuação<Highlight>.</Highlight></Title>
+          <CardContainer>
+            {areas.map(area => (
+              <Card 
+                key={area.title}
+                title={area.title}
+                image={area.image}
+                description={area.description}
+                link={area.link}
+                text={area.text}
+                cardData={area.cardData}
+                handleNavigate={handleNavigate}
+              />
+            ))}
+          </CardContainer>
+        </Content>
+      </Section>
 
-      <animated.section style={{ ...fadeIn, backgroundColor: '#0E395E', color: 'white' }}>
-     
-      <img src={backgroundImg6} alt="Background" style={{ position: 'absolute', width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }} />
-        <div style={{ position: 'absolute', width: '100%', height: '100%', backgroundColor: 'rgba(14, 57, 94, 0.93)', zIndex: 2 }}></div>
-        <div style={{ position: 'relative', zIndex: 3, padding: '50px' }}>
-        <p style={{fontSize: 20, color: 'gray'}}>PLANO ESTRATÉGICO E ESPECIALIZADO</p>
-        <h1 style={{fontSize: 40}}>áreas de atuação<span style={{color: "#8B173B"}} >.</span></h1>
-        <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', padding: '20px' }}>
-      {areas.map(area => (
-        <Card 
-        key={area.title}
-        title={area.title}
-        image={area.image}
-        description={area.description}
-        link={area.link}
-        text={area.text}
-        cardData={area.cardData}
-        handleNavigate={handleNavigate}
-        />
-      ))}
-    </div>
-        
-        </div>
+      <Section style={{...fadeIn, backgroundColor:"#FFFFFF", padding:"50px"}}  color="#0E395E" >
+        <Subtitle>RESPONSABILIDADE E TRANSPARÊNCIA</Subtitle>
+        <Title>Nosso time<Highlight>.</Highlight></Title>
+        <HorizontalScroll />
+      </Section>
 
-   
-      </animated.section>
+      <Section style={{...fadeIn,  backgroundColor:"#0E395E"}}>
+        <BackgroundImage src={escritorio} alt="Background" />
+        <Overlay />
+        <Content>
+          <Subtitle>ATENDIMENTO EM TODO BRASIL</Subtitle>
+          <Title>Nosso escritório<Highlight>.</Highlight></Title>
+          <ImageCarousel /> 
+        </Content>
+      </Section>
 
-      <animated.section style={{ ...fadeIn, backgroundColor: '#FFFFFF', color: '#0E395E', padding: '50px' }}>
-      <p style={{fontSize: 20, color: 'gray'}}>RESPONSABILIDADE E TRANSPARÊNCIA</p>
-      <h1 style={{fontSize: 40}}>Nosso time<span style={{color: "#8B173B"}} >.</span></h1>
-      <HorizontalScroll/>
-      </animated.section>
-
-      <animated.section style={{ ...fadeIn, backgroundColor: '#0E395E', color: 'white' }}>
-        <img src={escritorio} alt="Background" style={{ position: 'absolute', width: '100%', height: '100%', objectFit: 'cover', zIndex: 1 }} />
-        <div style={{ position: 'absolute', width: '100%', height: '100%', backgroundColor: 'rgba(14, 57, 94, 0.93)', zIndex: 2 }}></div>
-        <div style={{ position: 'relative', zIndex: 3, padding: '50px' }}>
-        <p style={{fontSize: 20, color: 'gray'}}>ATENDIMENTO EM TODO BRASIL</p>
-      <h1 style={{fontSize: 40}}>Nosso escritório<span style={{color: "#8B173B"}} >.</span></h1>
-     <ImageCarousel /> 
-     </div>
-    
-      </animated.section>
-
-      <animated.section style={{ ...fadeIn, backgroundColor: '#F2F2F5', color: 'white', padding: '50px' }}>
-        <ContactForm/>
-      </animated.section>
-    </div>
+      <Section style={{...fadeIn, backgroundColor:"#F2F2F5",padding:"50px"}}  color="#0E395E" >
+        <ContactForm />
+      </Section>
+    </Container>
   );
 };
 
