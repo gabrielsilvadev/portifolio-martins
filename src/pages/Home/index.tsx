@@ -262,8 +262,8 @@ const Home: React.FC = () => {
         </Content>
       </Section>
 
-      <Section style={{...fadeIn, backgroundColor:"#FFFFFF", padding:"35px",height:"450px"}}  color="#0E395E"  >
-        <div>
+      <Section style={{...fadeIn, backgroundColor:"#FFFFFF",height:"750px"}}  color="#0E395E"  >
+        <div style={{ insetInlineEnd: "30px"}}>
           <Subtitle>RESPONSABILIDADE E TRANSPARÊNCIA</Subtitle>
           <Title>Quem Somos<Highlight>.</Highlight></Title>
           <InfoText>Um escritório que combina tradição <br/> e inovação para oferecer soluções jurídicas de alto nível.<br/> Com uma fundação baseada<br/> no compromisso de prestar serviços jurídicos excepcionais, <br/>
@@ -295,7 +295,7 @@ const Home: React.FC = () => {
         </Content>
       </Section>
 
-      <Section style={{...fadeIn, backgroundColor:"#FFFFFF", padding:"50px"}}  color="#0E395E" >
+      <Section style={{...fadeIn, backgroundColor:"#FFFFFF",height:"750px"}}  color="#0E395E" >
         <Subtitle>RESPONSABILIDADE E TRANSPARÊNCIA</Subtitle>
         <Title>Nosso time<Highlight>.</Highlight></Title>
         <HorizontalScroll />

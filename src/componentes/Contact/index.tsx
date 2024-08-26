@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css'; // Estilo CSS para o formulário de contato
+import { ContactContainer, ContactContent, ContactInfo, ContactFormWrapper, FormGroup, Label, Input, TextArea, SubmitButton } from './styles';
 import { RiWhatsappFill } from "react-icons/ri";
 import { BiLogoGmail } from "react-icons/bi";
 
@@ -21,9 +21,9 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="contact-container">
-      <div className="contact-info">
-        <h2 style={{color: 'gray'}}>ESCOLHA O MELHOR PARA VOCÊ</h2>
+    <ContactContainer>
+      <ContactInfo>
+        <h2 style={{ color: 'gray' }}>ESCOLHA O MELHOR PARA VOCÊ</h2>
         <h3>Fale conosco.</h3>
         <p>
           Entre em contato com um especialista preenchendo ao lado todas as informações.
@@ -42,29 +42,29 @@ const ContactForm = () => {
             </a>
           </li>
         </ul>
-      </div>
-      <div className="contact-content">
-        <form className="contact-form" onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label htmlFor="name">Nome</label>
-            <input type="text" id="name" name="name" placeholder="Seu nome" required />
-          </div>
-          <div className="form-group">
-            <label htmlFor="phone">Telefone</label>
-            <input type="tel" id="phone" name="phone" placeholder="(83) 99999-9999" required />
-          </div>
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Digite o seu email" required />
-          </div>
-          <div className="form-group">
-            <label htmlFor="message">Mensagem</label>
-            <textarea id="message" name="message" placeholder="O que você precisa?" required></textarea>
-          </div>
-          <button type="submit">ENVIAR VIA WHATSAPP</button>
-        </form>
-      </div>
-    </div>
+      </ContactInfo>
+      <ContactContent>
+        <ContactFormWrapper onSubmit={handleSubmit}>
+          <FormGroup>
+            <Label htmlFor="name">Nome</Label>
+            <Input type="text" id="name" name="name" placeholder="Seu nome" required />
+          </FormGroup>
+          <FormGroup>
+            <Label htmlFor="phone">Telefone</Label>
+            <Input type="tel" id="phone" name="phone" placeholder="(83) 99999-9999" required />
+          </FormGroup>
+          <FormGroup>
+            <Label htmlFor="email">Email</Label>
+            <Input type="email" id="email" name="email" placeholder="Digite o seu email" required />
+          </FormGroup>
+          <FormGroup>
+            <Label htmlFor="message">Mensagem</Label>
+            <TextArea id="message" name="message" placeholder="O que você precisa?" required></TextArea>
+          </FormGroup>
+          <SubmitButton type="submit">ENVIAR VIA WHATSAPP</SubmitButton>
+        </ContactFormWrapper>
+      </ContactContent>
+    </ContactContainer>
   );
 };
 
