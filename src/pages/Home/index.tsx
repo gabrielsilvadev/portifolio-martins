@@ -295,7 +295,7 @@ const Home: React.FC = () => {
         </Content>
       </Section>
 
-      <Section style={{...fadeIn, backgroundColor:"#FFFFFF",height:"750px"}}  color="#0E395E" >
+      <Section style={{...fadeIn, backgroundColor:"#FFFFFF",height:"1000px"}}  color="#0E395E" >
         <Subtitle>RESPONSABILIDADE E TRANSPARÊNCIA</Subtitle>
         <Title>Nosso time<Highlight>.</Highlight></Title>
         <HorizontalScroll />
